@@ -4,5 +4,6 @@ export const Routes = {
   issues: "/dashboard/issues",
   alerts: "/dashboard/alerts",
   users: "/dashboard/users",
+  posts: "/dashboard/posts",
   settings: "/dashboard/settings",
 };

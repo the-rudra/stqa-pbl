@@ -9,10 +9,11 @@ import { Button } from "@features/ui";
 import styles from "./sidebar-navigation.module.scss";
 
 const menuItems = [
-  { text: "Projects", iconSrc: "/icons/projects.svg", href: Routes.projects },
-  { text: "Issues", iconSrc: "/icons/issues.svg", href: Routes.issues },
-  { text: "Alerts", iconSrc: "/icons/alert.svg", href: Routes.alerts },
+  { text: "Home", iconSrc: "/icons/projects.svg", href: Routes.projects },
+  // { text: "Issues", iconSrc: "/icons/issues.svg", href: Routes.issues },
+  // { text: "Alerts", iconSrc: "/icons/alert.svg", href: Routes.alerts },
   { text: "Users", iconSrc: "/icons/users.svg", href: Routes.users },
+  { text: "Posts", iconSrc: "/icons/users.svg", href: Routes.posts },
   { text: "Settings", iconSrc: "/icons/settings.svg", href: Routes.settings },
 ];
 
@@ -78,7 +79,7 @@ export function SidebarNavigation() {
           </ul>
           <ul className={styles.list}>
             <MenuItemButton
-              text="Support"
+              text="Contact"
               iconSrc="/icons/support.svg"
               isCollapsed={isSidebarCollapsed}
               onClick={() => alert("Support")}

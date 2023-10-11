@@ -9,7 +9,7 @@ type PageContainerProps = {
 };
 
 export function PageContainer({ children, title, info }: PageContainerProps) {
-  const documentTitle = `ProLog - ${title}`;
+  const documentTitle = `${title}`;
 
   return (
     <div className={styles.container}>

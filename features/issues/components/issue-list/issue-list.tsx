@@ -4,6 +4,8 @@ import { useGetProjects } from "@features/projects";
 import { useGetIssues } from "../../api/use-get-issues";
 import { IssueRow } from "./issue-row";
 import styles from "./issue-list.module.scss";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 export function IssueList() {
   const router = useRouter();
@@ -38,6 +40,7 @@ export function IssueList() {
     }),
     {} as Record<string, ProjectLanguage>,
   );
+
   const { items, meta } = issuesPage.data || {};
 
   return (

@@ -5,7 +5,7 @@ import { ProjectList } from "@features/projects";
 const Home: NextPage = () => {
   return (
     <PageContainer
-      title="Projects"
+      title="Dashboard"
       info="Overview of your projects sorted by alert level."
     >
       <ProjectList />
