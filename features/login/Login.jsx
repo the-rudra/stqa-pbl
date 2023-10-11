@@ -28,37 +28,41 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <span className={styles.user}>{user.name}</span>
-      <form className={styles.form}>
-        <input
-          type="text"
-          placeholder="username"
-          value={username}
-          className={styles.input}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          className={styles.input}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button
-          className={styles.button}
-          disabled={!username || !password}
-          onClick={handleClick}
-        >
-          {loading ? "please wait" : "Login"}
-        </button>
-        <span
-          data-testid="error"
-          className={styles.button}
-          style={{ visibility: error ? "visible" : "hidden" }}
-        >
-          Something went wrong!
-        </span>
-      </form>
+      <div className={styles.bg}></div>
+      <div className={styles.context}>
+        <span className={styles.user}>{user.name}</span>
+        <h1 className={styles.title}>Login</h1>
+        <form className={styles.form}>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            value={username}
+            className={styles.input}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            value={password}
+            className={styles.input}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            className={styles.button}
+            disabled={!username || !password}
+            onClick={handleClick}
+          >
+            {loading ? "Please wait" : "Login"}
+          </button>
+          <span
+            data-testid="error"
+            className={styles.button}
+            style={{ visibility: error ? "visible" : "hidden" }}
+          >
+            Something went wrong!
+          </span>
+        </form>
+      </div>
     </div>
   );
 };
