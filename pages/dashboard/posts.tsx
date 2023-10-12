@@ -55,16 +55,26 @@ const Posts: NextPage = () => {
             <div>
               <img src={images[index]?.download_url || ""} alt="" />
             </div>
-            <div className="text-center">{start * 10 + index + 1}</div>
-            <div className="text-center text-2xl font-bold">{post.title}</div>
-            <div className="">{post.body}</div>
+            <div className="text-center mt-4 text-gray-500">
+              {start * 10 + index + 1}
+            </div>
+            <div className="text-center text-2xl font-bold mt-8">
+              {post.title}
+            </div>
+            <div className="mt-4">{post.body}</div>
           </div>
         ))}
       </div>
       <div className="flex gap-8 mt-8">
         <button
           type="button"
-          onClick={() => setStart((prevStart) => prevStart - 1)}
+          onClick={() => {
+            setStart((prevStart) => prevStart - 1);
+            window.scrollTo({
+              top: 0,
+              behavior: "auto",
+            });
+          }}
           className="border rounded-full p-2 px-3 bg-white"
         >
           {"<"}
@@ -72,7 +82,13 @@ const Posts: NextPage = () => {
         <span className="py-2 font-bold">{start + 1}</span>
         <button
           type="button"
-          onClick={() => setStart((prevStart) => prevStart + 1)}
+          onClick={() => {
+            setStart((prevStart) => prevStart + 1);
+            window.scrollTo({
+              top: 0,
+              behavior: "auto",
+            });
+          }}
           className="border rounded-full p-2 px-3 bg-white"
         >
           {">"}

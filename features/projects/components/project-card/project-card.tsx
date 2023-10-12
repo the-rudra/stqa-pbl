@@ -42,20 +42,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <div className={styles.infoContainer}>
           <div className={styles.issues}>
-            <div className={styles.issuesTitle}>Total issues</div>
-            <div className={styles.issuesNumber}>{numIssues}</div>
+            <div className={styles.issuesTitle}>Status</div>
+            <div className={styles.issuesNumber}>Live</div>
           </div>
-          <div className={styles.issues}>
+          {/* <div className={styles.issues}>
             <div className={styles.issuesTitle}>Last 24h</div>
             <div className={styles.issuesNumber}>{numEvents24h}</div>
-          </div>
+          </div> */}
           <div className={styles.status}>
-            <Badge color={statusColors[status]}>{capitalize(status)}</Badge>
+            {/* <Badge color={statusColors[status]}>{capitalize(status)}</Badge> */}
           </div>
         </div>
       </div>
       <div className={styles.bottomContainer}>
-        <Link href={Routes.issues} className={styles.viewIssuesAnchor}>
+        <Link href="/dashboard" className={styles.viewIssuesAnchor}>
           View issues
         </Link>
       </div>

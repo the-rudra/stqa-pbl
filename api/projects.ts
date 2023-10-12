@@ -4,6 +4,23 @@ import type { Project } from "./projects.types";
 const ENDPOINT = "/project";
 
 export async function getProjects() {
-  const { data } = await axios.get<Project[]>(ENDPOINT);
-  return data;
+  // const { data } = await axios.get<Project[]>(ENDPOINT);
+  return [
+    {
+      id: "6d5fff43-d691-445d-a41a-7d0c639080e6",
+      numIssues: 73,
+      numEvents24h: 12,
+      status: "error",
+      name: "Web Application",
+      language: "react",
+    },
+    {
+      id: "340cb147-6397-4a12-aa77-41100acf085f",
+      numIssues: 25,
+      numEvents24h: 2,
+      status: "warning",
+      name: "Server",
+      language: "node",
+    },
+  ];
 }

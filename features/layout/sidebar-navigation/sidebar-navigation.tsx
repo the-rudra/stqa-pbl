@@ -79,17 +79,17 @@ export function SidebarNavigation() {
           </ul>
           <ul className={styles.list}>
             <MenuItemButton
-              text="Contact"
-              iconSrc="/icons/support.svg"
-              isCollapsed={isSidebarCollapsed}
-              onClick={() => alert("Support")}
-            />
-            <MenuItemButton
               text="Collapse"
               iconSrc="/icons/arrow-left.svg"
               isCollapsed={isSidebarCollapsed}
               onClick={() => toggleSidebar()}
               className={styles.collapseMenuItem}
+            />
+            <MenuItemButton
+              text="Logout"
+              iconSrc="/icons/logout-svgrepo-com (1).svg"
+              isCollapsed={isSidebarCollapsed}
+              onClick={() => router.push("/")}
             />
           </ul>
         </nav>

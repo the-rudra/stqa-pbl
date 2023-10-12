@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <PageContainer
       title="Dashboard"
-      info="Overview of your projects sorted by alert level."
+      info="Welcome to your dashboard! Here you can see and manage your deployed website."
     >
       <ProjectList />
     </PageContainer>

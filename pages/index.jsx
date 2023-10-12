@@ -7,16 +7,12 @@ const IssuesPage = () => {
     <div>
       <header className={styles.header}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/icons/logo-large.svg" alt="Prolog logo" />
-        <a href={Routes.projects}>Dashboard</a>
+        <img src="/icons/logo (2) small.png" alt="logo" className="h-16" />
+        {/* <a href={Routes.projects}>Dashboard</a> */}
       </header>
       <button
         className={styles.contactButton}
-        onClick={() =>
-          alert(
-            "Implement this in Challenge 2 - Modal:\n\nhttps://profy.dev/rjs-challenge-modal",
-          )
-        }
+        onClick={() => alert("Contact us through company@mail.com")}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/icons/message.svg" alt="Contact" />
