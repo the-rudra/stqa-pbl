@@ -20,8 +20,8 @@ describe("Issue List", () => {
         .find("tr")
         .each(($el, index) => {
           const user = usersMock[index];
-          cy.wrap($el).contains(user.firstName);
-          cy.wrap($el).contains(user.email);
+          cy.wrap($el).contains(user.firstName).contains(user.lastName);
+          cy.wrap($el).contains(user.email).contains("@");
           cy.wrap($el).contains(user.address.address);
         });
     });
